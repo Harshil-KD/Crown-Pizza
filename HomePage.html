@@ -12,190 +12,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 
-    <!-- <link rel="stylesheet" href="CSS/Menu-Page-Styles.css"> -->
-    <style>
-        .navbar {
-            background-color: #00DC09;
-        }
-
-        .navbar-brand {
-            margin-right: 90px;
-            /* Adjust the value to increase/decrease the space */
-        }
-
-        .navbar-brand img {
-            max-width: 180px;
-            /* Adjust the value to change the width of the logo */
-            height: auto;
-            /* Maintain aspect ratio */
-        }
-
-        .navbar-nav {
-            padding-left: 50px;
-        }
-
-        .navbar-nav .nav-link {
-            font-size: 22px;
-            margin-right: 20px;
-            font-weight: bold;
-            /* Adjust the font size */
-        }
-
-        /* Additional CSS for leaf image */
-        .leaf-image {
-            position: absolute;
-            top: 50%;
-            left: 2px;
-
-            transform: translateY(-50%);
-            width: 420px;
-            /* Adjust the width as needed */
-            height: 550px;
-            /* Adjust the height as needed */
-            background-image: url('Images/Home-Page Leaf.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-
-        /* Positioning the text elements */
-        .position-relative {
-            position: relative;
-            z-index: 1;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            padding: 30px;
-            /* Place text above the background */
-        }
-
-        .position-relative h1 {
-            font-size: 144px;
-        }
-
-        /* Adjust navbar for smaller screens */
-        @media (max-width: 797px) {
-            .navbar-brand {
-                margin-right: 20px;
-                /* Adjust as needed */
-            }
-
-            .navbar-nav {
-                padding-left: 15px;
-                /* Adjust as needed */
-            }
-
-            .navbar-nav .nav-link {
-                margin-right: 15px;
-                /* Adjust as needed */
-            }
-
-            .leaf-image {
-                width: 70%;
-                /* Adjust as needed */
-                max-width: 350px;
-                /* Adjust as needed */
-            }
-
-            .position-relative h1 {
-                font-size: 76px;
-            }
-        }
-
-        @media (max-width: 670px) {
-            .leaf-image {
-                width: 80%;
-                /* Adjust as needed */
-                max-width: 300px;
-                /* Adjust as needed */
-            }
-
-            .position-relative h1 {
-                font-size: 56px;
-            }
-        }
-
-        /* Further adjustments for narrower screens */
-        @media (max-width: 437px) {
-            .navbar-brand {
-                margin-right: 10px;
-                /* Adjust as needed */
-            }
-
-            .navbar-nav {
-                padding-left: 10px;
-                /* Adjust as needed */
-            }
-
-            .navbar-nav .nav-link {
-                font-size: 14px;
-                /* Adjust as needed */
-                margin-right: 10px;
-                /* Adjust as needed */
-            }
-
-            .leaf-image {
-                width: 80%;
-                /* Adjust as needed */
-                max-width: 250px;
-                /* Adjust as needed */
-            }
-
-            .position-relative h1 {
-                font-size: 46px;
-            }
-        }
-
-        /* Further adjustments for very small screens */
-        @media (max-width: 436px) {
-            .leaf-image {
-                width: 90%;
-                /* Adjust as needed */
-                max-width: 250px;
-                /* Adjust as needed */
-            }
-
-            .navbar-brand {
-                margin-right: 5px;
-                /* Adjust as needed */
-            }
-
-            .navbar-nav {
-                padding-left: 5px;
-                /* Adjust as needed */
-            }
-
-            .navbar-nav .nav-link {
-                font-size: 16px;
-                /* Adjust as needed */
-                margin-right: 10px;
-                /* Adjust as needed */
-            }
-
-            .position-relative h1 {
-                font-size: 32px;
-                /* Adjust as needed */
-            }
-        }
-
-        .carousel-item {
-            position: relative;
-        }
-
-        .pizza-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            width: 100%;
-        }
-
-        .pizza-img {
-            max-width: 200px;
-            /* Adjust as needed */
-            margin-bottom: 20px;
-            /* Adjust spacing */
-        }
-    </style>
+    <link rel="stylesheet" href="CSS/Home-Page-Styles.css">
 
 </head>
 
@@ -222,15 +39,15 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Menu</a>
+                        <a class="nav-link" href="MenuPage.html">Menu</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Drinks</a>
+                        <a class="nav-link" href="DrinksPage.html">Drinks</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Desserts</a>
+                        <a class="nav-link" href="DessertsPage.html">Desserts</a>
                     </li>
 
 
@@ -321,6 +138,11 @@
     </button>
     </div>
 
+    <footer class="text-center py-3">
+        <div class="container">
+            <p>&copy; 2023 Crown Pizza. All rights reserved.</p>
+        </div>
+    </footer>
 
 </body>
 

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crown Pizza</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="CSS/Menu-Page-Styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm ">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#">
+                <img src="Images/Brand Icon.png" alt="Brand_Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="HomePage.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Menu</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="DrinksPage.html">Drinks</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="DessertsPage.html">Desserts</a>
+                    </li>
+
+                </ul>
+
+                <a class="nav-link" href="#">
+                    <img src="Images/Cart-Icon.png" alt="cart_logo">
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="row mb-3 text-center">
+
+        <div class="col-sm-4 themed-grid-col">
+
+            <div class="card">
+
+                <div class="card-body position-relative">
+
+                    <div class="position-absolute top-0 start-0">
+                        <span class="badge pizzaPriceLabel" id="pizzaPriceLabel1">$20</span>
+                    </div>
+
+                    <img src="Images/menupizza1.png" class="card-img-top mt-5" alt="card1" name="pizza1" id="pizza1">
+                    <h5 class="pizzaName" id="pizzaName1">Newyork Pizza</h5>
+                    <p class="pizzaType">
+                        <span class="type-label">Type:</span>
+                        <span class="type-value" id="pizzaType1">Non Veg</span>
+                    </p>
+
+                    <div class="col-auto">
+
+                        <p class="pizzaQuantity">
+                            <span class="quantity-label">Quantity:</span>
+                            <span class="quantity-input">
+                                <input type="number" class="form-control pizzaQuantity" id="pizzaQuantity1" name="numericInput" value="1" min="1">
+                            </span>
+                        </p>
+
+                    </div>
+
+                    <button type="button" class="AddToCart btn mt-2" id="pizzaButton1">Add To Cart</button>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-md-4 themed-grid-col">
+
+            <div class="card">
+
+                <div class="card-body position-relative">
+                
+                    <div class="position-absolute top-0 start-0">
+                        <span class="badge pizzaPriceLabel" id="pizzaPriceLabel2">$20</span>
+                    </div>
+                
+                    <img src="Images/menupizza1.png" class="card-img-top mt-5" alt="card2" name="pizza2" id="pizza2">
+                    <h5 class="pizzaName" id="pizzaName2">Newyork Pizza</h5>
+                    <p class="pizzaType">
+                        <span class="type-label">Type:</span>
+                        <span class="type-value" id="pizzaType2">Non Veg</span>
+                    </p>
+                
+                    <div class="col-auto">
+                
+                        <p class="pizzaQuantity">
+                            <span class="quantity-label">Quantity:</span>
+                            <span class="quantity-input">
+                                <input type="number" class="form-control pizzaQuantity" id="pizzaQuantity2" name="numericInput"
+                                    value="1" min="1">
+                            </span>
+                        </p>
+                
+                    </div>
+                
+                    <button type="button" class="AddToCart btn mt-2" id="pizzaButton2">Add To Cart</button>
+                
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 themed-grid-col">
+
+            <div class="card">
+
+            <div class="card-body position-relative">
+            
+                <div class="position-absolute top-0 start-0">
+                    <span class="badge pizzaPriceLabel" id="pizzaPriceLabel3">$20</span>
+                </div>
+            
+                <img src="Images/menupizza1.png" class="card-img-top mt-5" alt="card3" name="pizza3" id="pizza3">
+                <h5 class="pizzaName" id="pizzaName3">Newyork Pizza</h5>
+                <p class="pizzaType">
+                    <span class="type-label">Type:</span>
+                    <span class="type-value" id="pizzaType3">Non Veg</span>
+                </p>
+            
+                <div class="col-auto">
+            
+                    <p class="pizzaQuantity">
+                        <span class="quantity-label">Quantity:</span>
+                        <span class="quantity-input">
+                            <input type="number" class="form-control pizzaQuantity" id="pizzaQuantity3" name="numericInput"
+                                value="1" min="1">
+                        </span>
+                    </p>
+            
+                </div>
+            
+                <button type="button" class="AddToCart btn mt-2" id="pizzaButton3">Add To Cart</button>
+            
+            </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row mb-3 text-center">
+
+        <div class="col-sm-4 themed-grid-col">
+
+            <div class="card">
+
+            <div class="card-body position-relative">
+            
+                <div class="position-absolute top-0 start-0">
+                    <span class="badge pizzaPriceLabel" id="pizzaPriceLabel4">$20</span>
+                </div>
+            
+                <img src="Images/menupizza1.png" class="card-img-top mt-5" alt="card4" name="pizza4" id="pizza4">
+                <h5 class="pizzaName" id="pizzaName4">Newyork Pizza</h5>
+                <p class="pizzaType">
+                    <span class="type-label">Type:</span>
+                    <span class="type-value" id="pizzaType4">Non Veg</span>
+                </p>
+            
+                <div class="col-auto">
+            
+                    <p class="pizzaQuantity">
+                        <span class="quantity-label">Quantity:</span>
+                        <span class="quantity-input">
+                            <input type="number" class="form-control pizzaQuantity" id="pizzaQuantity4" name="numericInput"
+                                value="1" min="1">
+                        </span>
+                    </p>
+            
+                </div>
+            
+                <button type="button" class="AddToCart btn mt-2" id="pizzaButton4">Add To Cart</button>
+            
+            </div>
+
+            </div>
+
+        </div>
+        <div class="col-md-4 themed-grid-col">
+
+            <div class="card">
+
+                <div class="card-body position-relative">
+                
+                    <div class="position-absolute top-0 start-0">
+                        <span class="badge pizzaPriceLabel" id="pizzaPriceLabel5">$20</span>
+                    </div>
+                
+                    <img src="Images/menupizza1.png" class="card-img-top mt-5" alt="card5" name="pizza5" id="pizza5">
+                    <h5 class="pizzaName" id="pizzaName5">Newyork Pizza</h5>
+                    <p class="pizzaType">
+                        <span class="type-label">Type:</span>
+                        <span class="type-value" id="pizzaType5">Non Veg</span>
+                    </p>
+                
+                    <div class="col-auto">
+                
+                        <p class="pizzaQuantity">
+                            <span class="quantity-label">Quantity:</span>
+                            <span class="quantity-input">
+                                <input type="number" class="form-control pizzaQuantity" id="pizzaQuantity5" name="numericInput"
+                                    value="1" min="1">
+                            </span>
+                        </p>
+                
+                    </div>
+                
+                    <button type="button" class="AddToCart btn mt-2" id="pizzaButton5">Add To Cart</button>
+                
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 themed-grid-col">
+
+            <div class="card">
+
+                <div class="card-body position-relative">
+                
+                    <div class="position-absolute top-0 start-0">
+                        <span class="badge pizzaPriceLabel" id="pizzaPriceLabel6">$20</span>
+                    </div>
+                
+                    <img src="Images/menupizza1.png" class="card-img-top mt-5" alt="card6" name="pizza6" id="pizza6">
+                    <h5 class="pizzaName" id="pizzaName6">Newyork Pizza</h5>
+                    <p class="pizzaType">
+                        <span class="type-label">Type:</span>
+                        <span class="type-value" id="pizzaType6">Non Veg</span>
+                    </p>
+                
+                    <div class="col-auto">
+                
+                        <p class="pizzaQuantity">
+                            <span class="quantity-label">Quantity:</span>
+                            <span class="quantity-input">
+                                <input type="number" class="form-control pizzaQuantity" id="pizzaQuantity6" name="numericInput"
+                                    value="1" min="1">
+                            </span>
+                        </p>
+                
+                    </div>
+                
+                    <button type="button" class="AddToCart btn mt-2" id="pizzaButton6">Add To Cart</button>
+                
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row mb-3 text-center">
+
+        <div class="col-sm-4 themed-grid-col">
+
+            <div class="card">
+
+                <div class="card-body position-relative">
+                
+                    <div class="position-absolute top-0 start-0">
+                        <span class="badge pizzaPriceLabel" id="pizzaPriceLabel7">$20</span>
+                    </div>
+                
+                    <img src="Images/menupizza1.png" class="card-img-top mt-5" alt="card7" name="pizza7" id="pizza7">
+                    <h5 class="pizzaName" id="pizzaName7">Newyork Pizza</h5>
+                    <p class="pizzaType">
+                        <span class="type-label">Type:</span>
+                        <span class="type-value" id="pizzaType7">Non Veg</span>
+                    </p>
+                
+                    <div class="col-auto">
+                
+                        <p class="pizzaQuantity">
+                            <span class="quantity-label">Quantity:</span>
+                            <span class="quantity-input">
+                                <input type="number" class="form-control pizzaQuantity" id="pizzaQuantity7" name="numericInput"
+                                    value="1" min="1">
+                            </span>
+                        </p>
+                
+                    </div>
+                
+                    <button type="button" class="AddToCart btn mt-2" id="pizzaButton7">Add To Cart</button>
+                
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-md-4 themed-grid-col">
+
+            <div class="card">
+
+                <div class="card-body position-relative">
+                
+                    <div class="position-absolute top-0 start-0">
+                        <span class="badge pizzaPriceLabel" id="pizzaPriceLabel8">$20</span>
+                    </div>
+                
+                    <img src="Images/menupizza1.png" class="card-img-top mt-5" alt="card8" name="pizza8" id="pizza8">
+                    <h5 class="pizzaName" id="pizzaName8">Newyork Pizza</h5>
+                    <p class="pizzaType">
+                        <span class="type-label">Type:</span>
+                        <span class="type-value" id="pizzaType8">Non Veg</span>
+                    </p>
+                
+                    <div class="col-auto">
+                
+                        <p class="pizzaQuantity">
+                            <span class="quantity-label">Quantity:</span>
+                            <span class="quantity-input">
+                                <input type="number" class="form-control pizzaQuantity" id="pizzaQuantity8" name="numericInput"
+                                    value="1" min="1">
+                            </span>
+                        </p>
+                
+                    </div>
+                
+                    <button type="button" class="AddToCart btn mt-2" id="pizzaButton8">Add To Cart</button>
+                
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 themed-grid-col">
+
+            <div class="card">
+
+                <div class="card-body position-relative">
+                
+                    <div class="position-absolute top-0 start-0">
+                        <span class="badge pizzaPriceLabel" id="pizzaPriceLabel9">$20</span>
+                    </div>
+                
+                    <img src="Images/menupizza1.png" class="card-img-top mt-5" alt="card9" name="pizza9" id="pizza9">
+                    <h5 class="pizzaName" id="pizzaName9">Newyork Pizza</h5>
+                    <p class="pizzaType">
+                        <span class="type-label">Type:</span>
+                        <span class="type-value" id="pizzaType9">Non Veg</span>
+                    </p>
+                
+                    <div class="col-auto">
+                
+                        <p class="pizzaQuantity">
+                            <span class="quantity-label">Quantity:</span>
+                            <span class="quantity-input">
+                                <input type="number" class="form-control pizzaQuantity" id="pizzaQuantity9" name="numericInput"
+                                    value="1" min="1">
+                            </span>
+                        </p>
+                
+                    </div>
+                
+                    <button type="button" class="AddToCart btn mt-2" id="pizzaButton9">Add To Cart</button>
+                
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="text-center py-3">
+        <div class="container">
+            <p>&copy; 2023 Crown Pizza. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="JavaScript/Menu-Page-Script.js"></script>
+
+</html>

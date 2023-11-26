@@ -1,8 +1,3 @@
-body {
-    background-color: #F2F2F2;
-    /* Change to your desired background color */
-}
-
 .navbar {
     background-color: #00DC09;
 }
@@ -30,6 +25,22 @@ body {
     /* Adjust the font size */
 }
 
+/* Additional CSS for leaf image */
+.leaf-image {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+
+    transform: translateY(-50%);
+    width: 420px;
+    /* Adjust the width as needed */
+    height: 550px;
+    /* Adjust the height as needed */
+    background-image: url('Images/Home-Page Leaf.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 /* Positioning the text elements */
 .position-relative {
     position: relative;
@@ -38,6 +49,10 @@ body {
     margin-bottom: 15px;
     padding: 30px;
     /* Place text above the background */
+}
+
+.position-relative h1 {
+    font-size: 144px;
 }
 
 /* Adjust navbar for smaller screens */
@@ -53,9 +68,32 @@ body {
     }
 
     .navbar-nav .nav-link {
-        margin-right: 15px;
+        margin-right: 14px;
         /* Adjust as needed */
-        font-size: 14px;
+    }
+
+    .leaf-image {
+        width: 70%;
+        /* Adjust as needed */
+        max-width: 350px;
+        /* Adjust as needed */
+    }
+
+    .position-relative h1 {
+        font-size: 76px;
+    }
+}
+
+@media (max-width: 670px) {
+    .leaf-image {
+        width: 80%;
+        /* Adjust as needed */
+        max-width: 300px;
+        /* Adjust as needed */
+    }
+
+    .position-relative h1 {
+        font-size: 56px;
     }
 }
 
@@ -77,10 +115,28 @@ body {
         margin-right: 10px;
         /* Adjust as needed */
     }
+
+    .leaf-image {
+        width: 80%;
+        /* Adjust as needed */
+        max-width: 250px;
+        /* Adjust as needed */
+    }
+
+    .position-relative h1 {
+        font-size: 46px;
+    }
 }
 
 /* Further adjustments for very small screens */
 @media (max-width: 436px) {
+    .leaf-image {
+        width: 90%;
+        /* Adjust as needed */
+        max-width: 250px;
+        /* Adjust as needed */
+    }
+
     .navbar-brand {
         margin-right: 5px;
         /* Adjust as needed */
@@ -97,73 +153,31 @@ body {
         margin-right: 10px;
         /* Adjust as needed */
     }
+
+    .position-relative h1 {
+        font-size: 32px;
+        /* Adjust as needed */
+    }
 }
 
-.themed-grid-col {
-    padding: 45px;
-    /* Add padding to each column */
+.carousel-item {
+    position: relative;
 }
 
-.pizzaPriceLabel {
-    color: black;
-    background-color: #00DC09;
-    font-size: 44px;
+.pizza-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
 }
 
-.card-img-top {
+.pizza-img {
+    max-width: 200px;
+    /* Adjust as needed */
     margin-bottom: 20px;
-    padding-top: 50px;
-    width: 50%;
-    height: auto;
-    /* Adjust the width as needed */
-}
-
-/* Increase size of price, name, and type labels */
-.pizzaName {
-    font-size: 44px;
-    /* Adjust the font size as needed */
-}
-
-/* CSS for aligning pizza type elements */
-.pizzaType {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* Center horizontally */
-    text-align: center;
-    /* Center the text within the container */
-}
-
-.type-label {
-    margin-right: 10px;
-    /* Adjust the spacing between label and value */
-}
-
-.type-value {
-    font-weight: bold;
-    /* Optional: to highlight the value */
-}
-
-/* CSS for aligning quantity label and input horizontally */
-.pizzaQuantity {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* Center horizontally */
-    text-align: center;
-    /* Center the text within the container */
-}
-
-.quantity-label {
-    margin-right: 10px;
-    /* Adjust the spacing between label and input */
-    /* Optionally, you can remove this margin and use padding to maintain space */
-}
-
-.AddToCart {
-    background-color: #00DC09;
-    font-size: 34px;
-    border-radius: 10%;
+    /* Adjust spacing */
 }
 
 footer {
@@ -171,22 +185,4 @@ footer {
     /* Green background color */
     color: white;
     /* White text color */
-}
-
-@media screen and (max-width: 1307px) {
-
-    .pizzaName,
-    .AddToCart {
-        /* Decrease the font sizes for smaller screens */
-        font-size: 34px;
-    }
-}
-
-@media screen and (max-width: 1162px) {
-
-    .pizzaName,
-    .AddToCart {
-        /* Decrease the font sizes for smaller screens */
-        font-size: 24px;
-    }
 }
