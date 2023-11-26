@@ -18,30 +18,29 @@ for (let i = 1; i <= 9; i++) {
 
 console.log(pizzas);
 
+function addToCart(productName, price, quantityId, imageUrl) {
+    const quantity = parseInt(document.getElementById(quantityId).value);
+    const total = price * quantity;
 
-// Array to hold pizza objects
-let cart = [];
-
-// Loop through each pizza button and attach a click event listener
-for (let i = 1; i <= 9; i++) {
-    document.getElementById(`pizzaButton${i}`).addEventListener('click', function () {
-        addToCart(i);
-    });
-}
-
-// Function to handle adding a pizza to the cart
-function addToCart(pizzaId) {
-    let pizza = {
-        id: pizzaId,
-        name: document.getElementById(`pizzaName${pizzaId}`).innerText,
-        type: document.getElementById(`pizzaType${pizzaId}`).innerText,
-        quantity: parseInt(document.getElementById(`pizzaQuantity${pizzaId}`).value),
-        price: parseFloat(document.getElementById(`pizzaPriceLabel${pizzaId}`).innerText.replace('$', '')),
-        // Add other properties as needed
+    const item = {
+        name: productName,
+        price: price,
+        quantity: quantity,
+        total: total,
+        image: imageUrl
     };
 
-    // Push the pizza object into the pizzas array
-    cart.push(pizza);
-    console.log('Pizza added to cart:', pizza);
-}
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let existingItemIndex = cart.findIndex(cartItem => cartItem.name === productName);
 
+    if (existingItemIndex !== -1) {
+        // If the item already exists in the cart, update its quantity
+        cart[existingItemIndex].quantity += quantity;
+        cart[existingItemIndex].total += total;
+    } else {
+        // If it's a new item, add it to the cart
+        cart.push(item);
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+}

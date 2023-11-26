@@ -187,6 +187,6 @@ footer {
     .pizzaName,
     .AddToCart {
         /* Decrease the font sizes for smaller screens */
-        font-size: 24px;
+        font-size: 14px;
     }
 }
