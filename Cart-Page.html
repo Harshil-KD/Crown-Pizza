@@ -5,82 +5,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cart Page</title>
+    <title>Crown Pizza</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="CSS/Cart-Page-Styles.css">
 </head>
 
 <body>
-    <!-- Cart Section -->
+
+    <nav class="navbar navbar-expand-sm ">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#">
+                <img src="Images/Brand Icon.png" alt="Brand_Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="HomePage.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Menu</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="DrinksPage.html">Drinks</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="DessertsPage.html">Desserts</a>
+                    </li>
+
+                </ul>
+
+                <a class="nav-link" href="Cart-Page.html">
+                    <img src="Images/Cart-Icon.png" alt="cart_logo">
+                </a>
+
+            </div>
+        </div>
+    </nav>
+    Cart Section
     <div class="cart">
         <h2>Shopping Cart</h2>
         <ul id="cartItems">
-            <!-- Cart items will be dynamically added here -->
+            Cart items will be dynamically added here
         </ul>
         <p>Total: $<span id="totalAmount">0</span></p>
     </div>
-
-    <script>
-        function displayCart() {
-            const cartItemsElement = document.getElementById('cartItems');
-            const totalAmountElement = document.getElementById('totalAmount');
-
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-            cartItemsElement.innerHTML = '';
-            let totalAmount = 0;
-
-            cart.forEach(item => {
-                const listItem = document.createElement('li');
-                const imageElement = document.createElement('img');
-                imageElement.src = item.image;
-                imageElement.alt = item.name;
-                imageElement.classList.add('cart-product-image');
-                listItem.appendChild(imageElement);
-
-                const contentDiv = document.createElement('div');
-                contentDiv.classList.add('cart-item-content');
-
-                const itemName = document.createElement('h4');
-                itemName.textContent = item.name;
-                contentDiv.appendChild(itemName);
-
-                const itemPrice = document.createElement('p');
-                itemPrice.textContent = `Price: $${item.price}`;
-                contentDiv.appendChild(itemPrice);
-
-                const itemQuantity = document.createElement('p');
-                itemQuantity.textContent = `Quantity: ${item.quantity}`;
-                contentDiv.appendChild(itemQuantity);
-
-                const itemTotal = document.createElement('p');
-                itemTotal.textContent = `Total: $${item.total}`;
-                contentDiv.appendChild(itemTotal);
-
-                listItem.appendChild(contentDiv);
-                cartItemsElement.appendChild(listItem);
-
-                totalAmount += item.total;
-            });
-
-            totalAmountElement.textContent = totalAmount;
-        }
-
-        window.onload = displayCart;
-
-        function clearCart() {
-            localStorage.removeItem('cart');
-        }
-
-        // Clear the cart when the user leaves the cart page
-        window.addEventListener('beforeunload', function () {
-            clearCart();
-        });
-
-        // Display the cart items when the cart page loads
-        window.onload = function () {
-            displayCart();
-        }
-    </script>
-    <!-- <script src="JavaScript/Menu-Page-Script.js"></script> -->
 </body>
+
+<script src="JavaScript/Cart-Page-Script.js"></script>
 
 </html>
