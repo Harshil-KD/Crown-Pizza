@@ -21,7 +21,7 @@ body {
 
 .navbar-nav {
     padding-left: 50px;
-}
+}    git 
 
 .navbar-nav .nav-link {
     font-size: 22px;
@@ -103,6 +103,8 @@ body {
     padding: 45px;
     /* Add padding to each column */
 }
+
+
 
 .pizzaPriceLabel {
     color: black;
