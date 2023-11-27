@@ -61,7 +61,7 @@
 
 function displayCart() {
     const cartItemsElement = document.getElementById('cartItems');
-    const totalAmountElement = document.getElementById('totalAmount');
+    const totalAmountElement = document.getElementById('totalamount');
 
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -107,7 +107,8 @@ function displayCart() {
         totalAmount += item.total;
     });
 
-    totalAmountElement.textContent = `$${totalAmount}`;
+    // totalAmountElement.textContent = `$${totalAmount}`;
+    totalAmountElement.textContent = `Total: $${totalAmount}`;
 }
 
 window.onload = displayCart;
