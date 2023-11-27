@@ -18,23 +18,27 @@ for (let i = 1; i <= 9; i++) {
 
 console.log(pizzas);
 
-function addToCart(productName, price, quantityId, imageUrl) {
+function addToCart(name, price, quantityId, image) {
     const quantity = parseInt(document.getElementById(quantityId).value);
     const total = price * quantity;
 
+    // Construct the item object to be added to the cart
     const item = {
-        name: productName,
+        name: name,
         price: price,
         quantity: quantity,
         total: total,
-        image: imageUrl
+        image: image
     };
 
+    // Retrieve cart items from localStorage or create an empty array if it's the first item
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let existingItemIndex = cart.findIndex(cartItem => cartItem.name === productName);
+
+    // Check if the item already exists in the cart based on its name
+    const existingItemIndex = cart.findIndex(cartItem => cartItem.name === name);
 
     if (existingItemIndex !== -1) {
-        // If the item already exists in the cart, update its quantity
+        // If the item exists, update its quantity and total
         cart[existingItemIndex].quantity += quantity;
         cart[existingItemIndex].total += total;
     } else {
@@ -42,5 +46,6 @@ function addToCart(productName, price, quantityId, imageUrl) {
         cart.push(item);
     }
 
+    // Save the updated cart items to localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
 }

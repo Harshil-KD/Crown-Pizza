@@ -99,10 +99,10 @@ body {
     }
 }
 /* New CSS for equal-height columns */
-.pizza-row {
+/* .pizza-row {
     display: flex;
     flex-wrap: wrap;
-}
+} */
 
 .themed-grid-col {
     flex: 1 0 33.3333%;
