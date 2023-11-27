@@ -111,17 +111,14 @@ body {
     box-sizing: border-box;
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    height: 800px;
-}
+
 
 .card-body {
     flex-grow: 1;
 }
 .themed-grid-col {
     padding: 45px;
+    padding-bottom: 20px;
     /* Add padding to each column */
 }
 
@@ -141,7 +138,7 @@ body {
 
 /* Increase size of price, name, and type labels */
 .drinkName {
-    font-size: 44px;
+    font-size: 34px;
     /* Adjust the font size as needed */
 }
 

@@ -92,7 +92,7 @@ body {
     }
 
     .navbar-nav .nav-link {
-        font-size: 10px;
+        font-size: 14px;
         /* Adjust as needed */
         margin-right: 10px;
         /* Adjust as needed */
@@ -188,7 +188,7 @@ footer {
 }
 
 .dessertName {
-    font-size: 44px;
+    font-size: 34px;
     /* Adjust the font size as needed */
 }
 

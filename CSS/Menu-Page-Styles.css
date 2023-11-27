@@ -21,7 +21,7 @@ body {
 
 .navbar-nav {
     padding-left: 50px;
-}    git 
+}    
 
 .navbar-nav .nav-link {
     font-size: 22px;
@@ -145,7 +145,7 @@ body {
 
 /* Increase size of price, name, and type labels */
 .pizzaName {
-    font-size: 44px;
+    font-size: 34px;
     /* Adjust the font size as needed */
 }
 
