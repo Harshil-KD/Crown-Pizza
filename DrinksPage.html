@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crown Pizza</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="CSS/Drinks-Page-Styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm ">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#">
+                <img src="Images/Brand Icon.png" alt="Brand_Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="HomePage.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="MenuPage.html">Menu</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Drinks</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Dessert-Page.html">Desserts</a>
+                    </li>
+
+                </ul>
+
+                <a class="nav-link" href="Cart-Page.html">
+                    <img src="Images/Cart-Icon.png" alt="cart_logo">
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="row mb-3 text-center">
+
+        <div class="col-sm-4 themed-grid-col">
+
+            <div class="card">
+
+                <div class="card-body position-relative">
+
+                    <div class="position-absolute top-0 start-0">
+                        <span class="badge drinkPriceLabel" id="drinkPriceLabel1">$3</span>
+                    </div>
+
+                    <img src="Images/redbull.png" class="card-img-top mt-5" alt="card1" name="drink1" id="drink1">
+                    <h5 class="drinkName" id="drinkName1">RedBull Can 250ml</h5>
+
+                    <div class="col-auto">
+
+                        <p class="drinkQuantity">
+                            <span class="quantity-label">Quantity:</span>
+                            <span class="quantity-input">
+                                <input type="number" class="form-control drinkQuantity" id="drinkQuantity1"
+                                    name="numericInput" value="1" min="1">
+                            </span>
+                        </p>
+
+                    </div>
+
+                    <button type="button" class="AddToCart btn mt-2" id="drinkButton2"
+                        onclick="addToCart('RedBull Can 250ml', 3, 'drinkQuantity1', 'Images/redbull.png')">
+                        Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-md-4 themed-grid-col">
+
+            <div class="card">
+
+                <div class="card-body position-relative">
+                
+                    <div class="position-absolute top-0 start-0">
+                        <span class="badge drinkPriceLabel" id="drinkPriceLabel2">$3</span>
+                    </div>
+                
+                    <img src="Images/coke.png" class="card-img-top mt-5" alt="card2" name="drink2" id="drink2">
+                    <h5 class="drinkName" id="drinkName2">Coke Can 250ml</h5>
+                
+                    <div class="col-auto">
+                
+                        <p class="drinkQuantity">
+                            <span class="quantity-label">Quantity:</span>
+                            <span class="quantity-input">
+                                <input type="number" class="form-control drinkQuantity" id="drinkQuantity2" name="numericInput"
+                                    value="1" min="1">
+                            </span>
+                        </p>
+                
+                    </div>
+                
+                    <button type="button" class="AddToCart btn mt-2" id="drinkButton2"
+                        onclick="addToCart('Coke', 3, 'drinkQuantity2', 'Images/coke.png')">
+                        Add To Cart
+                    </button>
+                
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 themed-grid-col">
+
+            <div class="card">
+
+                <div class="card-body position-relative">
+                
+                    <div class="position-absolute top-0 start-0">
+                        <span class="badge drinkPriceLabel" id="drinkPriceLabel3">$3</span>
+                    </div>
+                
+                    <img src="Images/fanta.png" class="card-img-top mt-5" alt="card3" name="drink3" id="drink3">
+                    <h5 class="drinkName" id="drinkName3">Fanta Can 250ml</h5>
+                
+                    <div class="col-auto">
+                
+                        <p class="drinkQuantity">
+                            <span class="quantity-label">Quantity:</span>
+                            <span class="quantity-input">
+                                <input type="number" class="form-control drinkQuantity" id="drinkQuantity3" name="numericInput"
+                                    value="1" min="1">
+                            </span>
+                        </p>
+                
+                    </div>
+                
+                    <button type="button" class="AddToCart btn mt-2" id="drinkButton3"
+                        onclick="addToCart('Fanta Can 250ml', 30, 'drinkQuantity3', 'Images/fanta.png')">
+                        Add To Cart
+                    </button>
+                
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row mb-3 text-center">
+
+        <div class="col-sm-4 themed-grid-col">
+
+            <div class="card">
+
+                <div class="card-body position-relative">
+                
+                    <div class="position-absolute top-0 start-0">
+                        <span class="badge drinkPriceLabel" id="drinkPriceLabel4">$3</span>
+                    </div>
+                
+                    <img src="Images/heinkin.png" class="card-img-top mt-5" alt="card4" name="drink4" id="drink4">
+                    <h5 class="drinkName" id="drinkName4">Heineken Beer Can 250ml</h5>
+                
+                    <div class="col-auto">
+                
+                        <p class="drinkQuantity">
+                            <span class="quantity-label">Quantity:</span>
+                            <span class="quantity-input">
+                                <input type="number" class="form-control drinkQuantity" id="drinkQuantity4" name="numericInput"
+                                    value="1" min="1">
+                            </span>
+                        </p>
+                
+                    </div>
+                
+                    <button type="button" class="AddToCart btn mt-2" id="drinkButton4"
+                        onclick="addToCart('Heineken Can 250ml', 3, 'drinkQuantity4', 'Images/heinkin.png')">
+                        Add To Cart
+                    </button>
+                
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-md-4 themed-grid-col">
+
+            <div class="card">
+
+                <div class="card-body position-relative">
+                
+                    <div class="position-absolute top-0 start-0">
+                        <span class="badge drinkPriceLabel" id="drinkPriceLabel5">$3</span>
+                    </div>
+                
+                    <img src="Images/v.png" class="card-img-top mt-5" alt="card5" name="drink5" id="drink5">
+                    <h5 class="drinkName" id="drinkName5">V Can 250ml</h5>
+                
+                    <div class="col-auto">
+                
+                        <p class="drinkQuantity">
+                            <span class="quantity-label">Quantity:</span>
+                            <span class="quantity-input">
+                                <input type="number" class="form-control drinkQuantity" id="drinkQuantity5" name="numericInput"
+                                    value="1" min="1">
+                            </span>
+                        </p>
+                
+                    </div>
+                
+                    <button type="button" class="AddToCart btn mt-2" id="drinkButton5"
+                        onclick="addToCart('V Can 250ml', 3, 'drinkQuantity5', 'Images/v.png')">
+                        Add To Cart
+                    </button>
+                
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 themed-grid-col">
+
+            <div class="card">
+
+            <div class="card-body position-relative">
+            
+                <div class="position-absolute top-0 start-0">
+                    <span class="badge drinkPriceLabel" id="drinkPriceLabel6">$3</span>
+                </div>
+            
+                <img src="Images/lemon.png" class="card-img-top mt-5" alt="card6" name="drink6" id="drink6">
+                <h5 class="drinkName" id="drinkName4">Lemon Water Can 250ml</h5>
+            
+                <div class="col-auto">
+            
+                    <p class="drinkQuantity">
+                        <span class="quantity-label">Quantity:</span>
+                        <span class="quantity-input">
+                            <input type="number" class="form-control drinkQuantity" id="drinkQuantity6" name="numericInput"
+                                value="1" min="1">
+                        </span>
+                    </p>
+            
+                </div>
+            
+                <button type="button" class="AddToCart btn mt-2" id="drinkButton6"
+                    onclick="addToCart('Lemon Water Can 250ml', 3, 'drinkQuantity6', 'Images/lemon.png')">
+                    Add To Cart
+                </button>
+            
+            </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row mb-3 text-center">
+
+        <div class="col-sm-4 themed-grid-col">
+
+            <div class="card">
+
+                <div class="card-body position-relative">
+                
+                    <div class="position-absolute top-0 start-0">
+                        <span class="badge drinkPriceLabel" id="drinkPriceLabel7">$3</span>
+                    </div>
+                
+                    <img src="Images/sprite.png" class="card-img-top mt-5" alt="card7" name="drink7" id="drink7">
+                    <h5 class="drinkName" id="drinkName7">Sprite Can 250ml</h5>
+                
+                    <div class="col-auto">
+                
+                        <p class="drinkQuantity">
+                            <span class="quantity-label">Quantity:</span>
+                            <span class="quantity-input">
+                                <input type="number" class="form-control drinkQuantity" id="drinkQuantity7" name="numericInput"
+                                    value="1" min="1">
+                            </span>
+                        </p>
+                
+                    </div>
+                
+                    <button type="button" class="AddToCart btn mt-2" id="drinkButton7"
+                        onclick="addToCart('Sprite Can 250ml', 3, 'drinkQuantity7', 'Images/sprite.png')">
+                        Add To Cart
+                    </button>
+                
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 themed-grid-col">
+        
+            
+        
+        </div>
+
+        <div class="col-md-4 themed-grid-col">
+        
+            
+        
+        </div>
+
+    </div>
+    
+
+    <footer class="text-center py-3">
+        <div class="container">
+            <p>&copy; 2023 Crown Pizza. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="JavaScript/Drinks-Page-Scripts.js"></script>
+
+</html>

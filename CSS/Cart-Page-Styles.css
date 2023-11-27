@@ -98,3 +98,104 @@ body {
         /* Adjust as needed */
     }
 }
+
+.themed-grid-col {
+    padding: 45px;
+    /* Add padding to each column */
+}
+
+.pizzaPriceLabel {
+    color: black;
+    background-color: #00DC09;
+    font-size: 44px;
+}
+
+.card-img-top {
+    margin-bottom: 20px;
+    padding-top: 50px;
+    width: 50%;
+    height: auto;
+    /* Adjust the width as needed */
+}
+
+/* Increase size of price, name, and type labels */
+.pizzaName {
+    font-size: 44px;
+    /* Adjust the font size as needed */
+}
+
+/* CSS for aligning pizza type elements */
+.pizzaType {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center horizontally */
+    text-align: center;
+    /* Center the text within the container */
+}
+
+.type-label {
+    margin-right: 10px;
+    /* Adjust the spacing between label and value */
+}
+
+.type-value {
+    font-weight: bold;
+    /* Optional: to highlight the value */
+}
+
+/* CSS for aligning quantity label and input horizontally */
+.pizzaQuantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center horizontally */
+    text-align: center;
+    /* Center the text within the container */
+}
+
+.quantity-label {
+    margin-right: 10px;
+    /* Adjust the spacing between label and input */
+    /* Optionally, you can remove this margin and use padding to maintain space */
+}
+
+.AddToCart {
+    background-color: #00DC09;
+    font-size: 34px;
+    border-radius: 10%;
+}
+
+footer {
+    background-color: #00DC09;
+    /* Green background color */
+    color: white;
+    /* White text color */
+}
+
+
+.card-body,
+.custom-class {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+@media screen and (max-width: 1307px) {
+
+    .pizzaName,
+    .AddToCart {
+        /* Decrease the font sizes for smaller screens */
+        font-size: 34px;
+    }
+}
+
+@media screen and (max-width: 1162px) {
+
+    .pizzaName,
+    .AddToCart {
+        /* Decrease the font sizes for smaller screens */
+        font-size: 14px;
+    }
+}
