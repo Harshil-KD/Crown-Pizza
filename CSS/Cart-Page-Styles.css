@@ -99,9 +99,24 @@ body {
     }
 }
 
+#totalAmount {
+    background-color: #00DC09;
+    padding: 20px;
+    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    position: sticky;
+}
+
+.row {
+    display: flex;
+    overflow-x: auto;
+}
+
 .themed-grid-col {
-    flex: 1 0 33.3333%;
-    /* Set the columns to take up an equal part of the row */
+    /* flex: 1 0 33.3333%;
+    Set the columns to take up an equal part of the row */
+
     padding: 0 15px;
     /* Adjust the padding as needed */
     box-sizing: border-box;
@@ -109,8 +124,7 @@ body {
 
 .card {
     display: flex;
-    flex-direction: column;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .card-body {
@@ -164,6 +178,19 @@ h5 {
     border-top: 2px solid #ccc;
     padding-top: 10px;
     color: black;
+}
+
+.custom-checkout-btn {
+
+    background-color: #00DC09;
+    color: white;
+    padding: 12px 24px;
+    /* Adjust padding for size */
+    font-size: 48px;
+    font-weight: bold;
+    /* Adjust font size */
+    /* Additional styling if needed */
+
 }
 
 footer {

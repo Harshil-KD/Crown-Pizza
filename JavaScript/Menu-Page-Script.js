@@ -45,8 +45,8 @@ function updatePrice(pizzaNumber) {
 
 
 function addToCart(name, price, quantityId, image) {
-    const quantity = parseInt(document.getElementById(quantityId).value);
-    const total = price * quantity;
+    var quantity = parseInt(document.getElementById(quantityId).value);
+    var total = price* quantity;
 
     // Construct the item object to be added to the cart
     const item = {
@@ -56,7 +56,6 @@ function addToCart(name, price, quantityId, image) {
         total: total,
         image: image
     };
-
     // Retrieve cart items from localStorage or create an empty array if it's the first item
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -74,4 +73,29 @@ function addToCart(name, price, quantityId, image) {
 
     // Save the updated cart items to localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
+
+    console.log("check things")
+    updateCartDisplay();
+}
+
+// check  
+
+
+function updateCartDisplay() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartListElement = document.getElementById('cartList');
+    const cartTotalElement = document.getElementById('cartTotal');
+
+    cartListElement.innerHTML = ''; // Clear previous cart items
+    let totalAmount = 0;
+
+    cart.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${item.name} - $${item.total.toFixed(2)}`;
+        cartListElement.appendChild(listItem);
+
+        totalAmount += item.total;
+    });
+
+    cartTotalElement.textContent = `$${totalAmount.toFixed(2)}`;
 }
