@@ -12,7 +12,7 @@ function addToCart(name, price, quantityId, image) {
     };
 
     // Retrieve cart items from localStorage or create an empty array if it's the first item
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    var cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     // Check if the item already exists in the cart based on its name
     const existingItemIndex = cart.findIndex(cartItem => cartItem.name === name);

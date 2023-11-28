@@ -18,6 +18,32 @@ for (let i = 1; i <= 9; i++) {
 
 console.log(pizzas);
 
+function updatePrice(pizzaNumber) {
+    const crustSize = document.getElementById(`pizzaSize${pizzaNumber}`).value;
+    let price;
+
+    switch (crustSize) {
+        case "small":
+            price = 20.00;
+            break;
+        case "medium":
+            price = 22.00;
+            break;
+        case "large":
+            price = 24.00;
+            break;
+        case "extraLarge":
+            price = 26.00;
+            break;
+        default:
+            price = 20.00; // Default price for XL
+    }
+
+    document.getElementById(`pizzaPriceLabel${pizzaNumber}`).textContent = `$${price.toFixed(2)}`;
+}
+
+
+
 function addToCart(name, price, quantityId, image) {
     const quantity = parseInt(document.getElementById(quantityId).value);
     const total = price * quantity;

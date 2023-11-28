@@ -150,7 +150,7 @@ body {
 }
 
 /* CSS for aligning pizza type elements */
-.pizzaType {
+.pizzaSize {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,12 +159,12 @@ body {
     /* Center the text within the container */
 }
 
-.type-label {
+.size-label {
     margin-right: 10px;
     /* Adjust the spacing between label and value */
 }
 
-.type-value {
+.size-value {
     font-weight: bold;
     /* Optional: to highlight the value */
 }
