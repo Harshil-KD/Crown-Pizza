@@ -1,6 +1,10 @@
 body {
     background-color: #F2F2F2;
     /* Change to your desired background color */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    /* This ensures the body is at least the full height of the viewport */
 }
 
 .navbar {

@@ -1,18 +1,16 @@
 function addToCart(name, price, quantityId, image) {
     const quantity = parseInt(document.getElementById(quantityId).value);
-    const total = price * quantity;
 
     // Construct the item object to be added to the cart
     const item = {
         name: name,
         price: price,
         quantity: quantity,
-        total: total,
         image: image
     };
 
     // Retrieve cart items from localStorage or create an empty array if it's the first item
-    var cart = JSON.parse(localStorage.getItem('cart')) || [];
+    var cart = JSON.parse(sessionStorage.getItem('cart')) || [];
 
     // Check if the item already exists in the cart based on its name
     const existingItemIndex = cart.findIndex(cartItem => cartItem.name === name);
@@ -27,5 +25,5 @@ function addToCart(name, price, quantityId, image) {
     }
 
     // Save the updated cart items to localStorage
-    localStorage.setItem('cart', JSON.stringify(cart));
+    sessionStorage.setItem('cart', JSON.stringify(cart));
 }

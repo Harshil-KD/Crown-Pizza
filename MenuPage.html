@@ -98,7 +98,7 @@
 
                     </div>
 
-                    <button type="button" class="AddToCart btn mt-2" id="pizzaButton1" onclick="addToCart('Newyork Pizza', '20', 'pizzaQuantity1', 'Images/menupizza1.png')">
+                    <button type="button" class="AddToCart btn mt-2" id="pizzaButton1" onclick="addToCart('Newyork Pizza', '20', 'pizzaSize1' ,'pizzaQuantity1', 'Images/pizza1.png')">
                         Add To Cart
                     </button>
 
@@ -145,7 +145,7 @@
                 
                     </div>
                 
-                    <button type="button" class="AddToCart btn mt-2" id="pizzaButton2" onclick="addToCart('Pepperoni Pizza', 20, 'pizzaQuantity2', 'Images/pizza2.png')">
+                    <button type="button" class="AddToCart btn mt-2" id="pizzaButton2" onclick="addToCart('Pepperoni Pizza', '20', 'pizzaSize2' , 'pizzaQuantity2', 'Images/pizza2.png')">
                         Add To Cart
                     </button>
                 
@@ -193,7 +193,7 @@
             
                 </div>
             
-                <button type="button" class="AddToCart btn mt-2" id="pizzaButton3" onclick="addToCart('Onion Pizza', 20, 'pizzaQuantity3', 'Images/pizza3.png')">
+                <button type="button" class="AddToCart btn mt-2" id="pizzaButton3" onclick="addToCart('Onion Pizza', '20', 'pizzaSize3', 'pizzaQuantity3', 'Images/pizza3.png')">
                     Add To Cart
                 </button>
             
@@ -244,7 +244,7 @@
             
                 </div>
             
-                <button type="button" class="AddToCart btn mt-2" id="pizzaButton4" onclick="addToCart('Margherita Pizza', 20, 'pizzaQuantity4', 'Images/pizza4.png')">
+                <button type="button" class="AddToCart btn mt-2" id="pizzaButton4" onclick="addToCart('Margherita Pizza', '20', 'pizzaSize4', 'pizzaQuantity4', 'Images/pizza4.png')">
                     Add To Cart
                 </button>
             
@@ -291,7 +291,7 @@
                 
                     </div>
                 
-                    <button type="button" class="AddToCart btn mt-2" id="pizzaButton5" onclick="addToCart('Chicken Pizza', 20, 'pizzaQuantity5', 'Images/pizza5.png')">
+                    <button type="button" class="AddToCart btn mt-2" id="pizzaButton5" onclick="addToCart('Chicken Pizza', '20', 'pizzaSize5', 'pizzaQuantity5', 'Images/pizza5.png')">
                         Add To Cart
                     </button>
                 
@@ -339,7 +339,7 @@
                 
                     </div>
                 
-                    <button type="button" class="AddToCart btn mt-2" id="pizzaButton6" onclick="addToCart('Mushroom Pizza', 20, 'pizzaQuantity6', 'Images/pizza6.png')">
+                    <button type="button" class="AddToCart btn mt-2" id="pizzaButton6" onclick="addToCart('Mushroom Pizza', '20','pizzaSize6', 'pizzaQuantity6', 'Images/pizza6.png')">
                         Add To Cart
                     </button>
                 
@@ -391,7 +391,7 @@
                 
                     </div>
                 
-                    <button type="button" class="AddToCart btn mt-2" id="pizzaButton7" onclick="addToCart('Chicken Burger', 12, 'pizzaQuantity7', 'Images/chickenburger.png')">
+                    <button type="button" class="AddToCart btn mt-2" id="pizzaButton7" onclick="addToCart('Chicken Burger', '20', 'pizzaSize7', 'pizzaQuantity7', 'Images/chickenburger.png')">
                         Add To Cart
                     </button>
                 
@@ -438,7 +438,7 @@
                 
                     </div>
                 
-                    <button type="button" class="AddToCart btn mt-2" id="pizzaButton8" onclick="addToCart('Veggie Burger', 12, 'pizzaQuantity8', 'Images/veggieburg.png')">
+                    <button type="button" class="AddToCart btn mt-2" id="pizzaButton8" onclick="addToCart('Veggie Burger', '20', 'pizzaSize8', 'pizzaQuantity8', 'Images/veggieburg.png')">
                         Add To Cart
                     </button>
                 
@@ -464,7 +464,7 @@
                         <span class="size-label">Size:</span>
                         <span class="size-value" id="pizzaType9">
 
-                            <select class="form-select" aria-label="Select" id="pizzaSize9" onchange="updatePrice(9)">
+                            <select class="form-select" aria-label="Select" id="pizzaSize9">
                                 <option value="small" selected>Small</option>
                                 <option value="medium">Medium</option>
                                 <option value="large">Large</option>
@@ -486,7 +486,7 @@
                 
                     </div>
                 
-                    <button type="button" class="AddToCart btn mt-2" id="pizzaButton9" onclick="addToCart('Potato Fries', 5, 'pizzaQuantity9', 'Images/fries.png')">
+                    <button type="button" class="AddToCart btn mt-2" id="pizzaButton9" onclick="addToCart('Potato Fries', '20', 'pizzaSize9', 'pizzaQuantity9', 'Images/fries.png')">
                         Add To Cart
                     </button>
                 
@@ -496,13 +496,6 @@
 
         </div>
 
-    </div>
-
-
-    <div id="shoppingCart" class="mt-5">
-        <h3>Shopping Cart</h3>
-        <ul id="cartList"></ul>
-        <p>Total: <span id="cartTotal">$0.00</span></p>
     </div>
 
     <footer class="text-center py-3">

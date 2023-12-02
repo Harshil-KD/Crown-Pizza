@@ -31,12 +31,6 @@ function displayCart() {
         priceLabel.appendChild(span);
         cardbody.appendChild(priceLabel);
 
-        // const removeButton = document.createElement('button');
-        // removeButton.innerHTML = '<i class="bi bi-x-circle"></i>'; // Assuming Bootstrap icons
-        // removeButton.classList.add('btn', 'btn-danger', 'remove-item-btn');
-        // removeButton.addEventListener('click', removeItemFromCart(item));
-        // cardbody.appendChild(removeButton);
-
         const imageElement = document.createElement('img');
         imageElement.src = item.image;
         imageElement.alt = item.name;
