@@ -52,7 +52,13 @@
 }
 
 .position-relative h1 {
-    font-size: 144px;
+    font-size: 124px;
+}
+
+.img-thumbnail {
+    border-radius: 76%;
+    padding: 0px 0px;
+    border: 0px solid red;
 }
 
 /* Adjust navbar for smaller screens */
