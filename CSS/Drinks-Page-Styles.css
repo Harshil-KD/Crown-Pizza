@@ -106,9 +106,8 @@ body {
 }
 
 .themed-grid-col {
-    flex: 1 0 33.3333%;
-    /* Set the columns to take up an equal part of the row */
-    padding: 0 15px;
+
+    padding: 0 10px;
     /* Adjust the padding as needed */
     box-sizing: border-box;
 }
