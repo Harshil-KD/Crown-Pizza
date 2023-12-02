@@ -5,6 +5,7 @@ body {
 
 .navbar {
     background-color: #00DC09;
+    margin-bottom: 25px;
 }
 
 .navbar-brand {
@@ -107,19 +108,20 @@ body {
 .themed-grid-col {
     flex: 1 0 33.3333%;
     /* Set the columns to take up an equal part of the row */
-    padding: 0 15px; /* Adjust the padding as needed */
+    padding: 0 15px;
+    /* Adjust the padding as needed */
     box-sizing: border-box;
 }
 
-
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* Ensure all cards take up equal height */
+}
 
 .card-body {
     flex-grow: 1;
-}
-.themed-grid-col {
-    padding: 45px;
-    padding-bottom: 20px;
-    /* Add padding to each column */
 }
 
 .drinkPriceLabel {

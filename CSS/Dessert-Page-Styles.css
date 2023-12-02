@@ -101,7 +101,15 @@ body {
 
 .themed-grid-col {
     padding: 45px;
+    display: flex;
+    flex-wrap: wrap;
     /* Add padding to each column */
+}
+
+.card {
+    flex: 1;
+    margin: 10px;
+    /* Adjust margin as needed */
 }
 
 .pizzaPriceLabel {
@@ -119,33 +127,15 @@ body {
 }
 
 /* Increase size of price, name, and type labels */
-.pizzaName {
+.dessertName {
     font-size: 44px;
     /* Adjust the font size as needed */
 }
 
 /* CSS for aligning pizza type elements */
-.pizzaType {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* Center horizontally */
-    text-align: center;
-    /* Center the text within the container */
-}
-
-.type-label {
-    margin-right: 10px;
-    /* Adjust the spacing between label and value */
-}
-
-.type-value {
-    font-weight: bold;
-    /* Optional: to highlight the value */
-}
 
 /* CSS for aligning quantity label and input horizontally */
-.pizzaQuantity {
+.dessertQuantity {
     display: flex;
     align-items: center;
     justify-content: center;
