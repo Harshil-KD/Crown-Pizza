@@ -1,4 +1,4 @@
-.container{
+.container {
     margin: 0px;
     padding: 50px;
 }
@@ -82,33 +82,53 @@ footer {
 .modal-content {
     background-color: #fff;
     /* Modal background color */
-    border-radius: 10px;
-    /* Rounded corners */
+
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     /* Add a subtle shadow */
 }
 
 .modal-header {
-    background-color: #f8f9fa;
+    background-color: #00DC09;
     /* Header background color */
     border-bottom: none;
     /* Remove border for the header */
 }
 
 .modal-title {
-    color: #333;
+    color: #fff;
     /* Header title color */
     font-weight: bold;
     /* Make the title bold */
 }
 
 .modal-body {
-    padding: 20px;
     /* Padding for the modal content */
+    background-color: #ffffff;
 }
 
 /* Optional: Style the close button */
-.modal-header .btn-close {
-    color: #333;
+.btn-close {
+    color: #00DC09;
     /* Close button color */
+}
+
+/* CSS/Payment-Page-Styles.css */
+
+
+/* Style for secondary (close) button */
+.btn-secondary {
+    background-color: #00DC09;
+    /* Change background color for secondary button */
+    border-color: #ffffff;
+    /* Change border color for secondary button */
+    color: #fff;
+    /* Text color for secondary button */
+    width: 100%;
+    /* Set the width to 100% */
+}
+
+/* Hover effect for buttons */
+.btn-secondary:hover {
+    opacity: 0.8;
+    /* Adjust opacity on hover */
 }
