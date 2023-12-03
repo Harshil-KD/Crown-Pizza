@@ -79,3 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+function redirectToHomePage() {
+    // Redirect to the home page URL
+    window.location.href = 'HomePage.html'; 
+}

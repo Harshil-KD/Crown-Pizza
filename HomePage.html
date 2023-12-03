@@ -13,6 +13,14 @@
         crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="CSS/Home-Page-Styles.css">
+    <script>
+        function logout() {
+            
+            // Redirect to the login page
+            window.location.href = "Loginpage.html";
+            
+        }
+    </script>
 
 </head>
 
@@ -21,7 +29,7 @@
         <div class="container-fluid">
 
             <a class="navbar-brand" href="#">
-                <img src="Images/Brand Icon.png" alt="Brand_Logo">
+                <img src="Images/BrandIcon.png" alt="Brand_Logo">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -52,6 +60,12 @@
 
 
                 </ul>
+                   <!-- Logout Button -->
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);" onclick="logout()">Logout</a>
+                </li>
+            </ul>
 
                 <a class="nav-link" href="Cart-Page.html">
                     <img src="Images/Cart-Icon.png" alt="cart_logo">
@@ -64,7 +78,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-sm-8 position-relative">
-                <div class="leaf-image">   <img src="Images/Home-Page Leaf.png" class="img-thumbnail" alt="leaf"></div>
+                <div class="leaf-image">   <img src="Images/Home-PageLeaf.png" class="img-thumbnail" alt="leaf"></div>
                 <h1 class="text-center text-black position-relative">Welcome To Crown Pizza</h1>
                 <p class="text-black position-relative">
                     Welcome to Crown Pizza, where passion meets flavor in every slice. At Crown Pizza, 
