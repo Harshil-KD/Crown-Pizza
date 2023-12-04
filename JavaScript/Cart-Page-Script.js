@@ -1,22 +1,28 @@
-// Retrieve cart items from session storage
+// Function to retrieve cart items from session storage or return an empty array if none exist
 function getCartItems() {
     return JSON.parse(sessionStorage.getItem('cart')) || [];
 }
 
-// Display cart items on the cart page
+
+// Function to display cart items on the page
 function displayCartItems() {
+    // Fetch cart items from session storage
     const cartItems = getCartItems();
+
+    // Get DOM elements
     const cartItemsElement = document.getElementById('cartItems');
     const totalAmountElement = document.getElementById('totalAmount');
 
-    let totalAmount = 0;
+    let totalAmount = 0; // Variable to calculate total amount of items in the cart
 
     let currentIndex = 0;
-
+    // Loop through each item in the cart and create HTML elements to display them
     cartItems.forEach(item => {
+        // Create HTML elements
         const listItem = document.createElement('div');
         listItem.classList.add('col-sm-4', 'themed-grid-col');
 
+        // ... (creating card, card body, image, buttons, etc.)
         const card = document.createElement('div');
         card.classList.add('card');
 
@@ -36,21 +42,16 @@ function displayCartItems() {
         removeButton.classList.add('btn', 'btn-danger', 'remove-btn', 'position-absolute', 'top-0', 'end-0');
         removeButton.addEventListener('click', () => {
 
-            // Find the index of the item in the cart array by its name
             const itemIndex = cartItems.findIndex(cartItem => cartItem.name === item.name);
 
             if (itemIndex !== -1) {
-                // Remove the item from the cart array
                 cartItems.splice(itemIndex, 1);
 
-                // Update session storage with the modified cart
                 sessionStorage.setItem('cart', JSON.stringify(cartItems));
                 console.log('Cart after removal:', cartItems);
 
-                // Remove the item's HTML element from the DOM
                 listItem.remove();
 
-                // Recalculate the total amount and update the display
                 totalAmount -= item.price * item.quantity;
                 totalAmountElement.textContent = `Total: $${totalAmount.toFixed(2)}`;
             }
@@ -67,12 +68,6 @@ function displayCartItems() {
         const itemName = document.createElement('h5');
         itemName.textContent = item.name;
         cardBody.appendChild(itemName);
-
-        // const itemSize = document.createElement('p');
-        // itemSize.textContent = `Size: ${item.size}`; // Display the size
-        // cardBody.appendChild(itemSize);
-
-        // Check if the item has a size property before displaying it
         if (item.hasOwnProperty('size')) {
             const itemSize = document.createElement('p');
             itemSize.textContent = `Size: ${item.size}`;
@@ -83,27 +78,29 @@ function displayCartItems() {
         itemQuantity.textContent = `Quantity: ${item.quantity}`;
         cardBody.appendChild(itemQuantity);
 
+        // Adding created elements to the DOM
         card.appendChild(cardBody);
         listItem.appendChild(card);
         cartItemsElement.appendChild(listItem);
 
-        // Update the total amount based on item prices and quantities
+        // Update total amount by calculating price * quantity for each item
         totalAmount += item.price * item.quantity;
 
         currentIndex++;
     });
 
-    // Update the total amount displayed on the page
+    // Display total amount in the designated element
     totalAmountElement.textContent = `Total: $${totalAmount.toFixed(2)}`;
 }
 
-// Display cart items on opening of the page
+// Call function to display cart items when the page loads
 displayCartItems();
 
+// Get checkout button and add an event listener to redirect to payment page on click
 const checkoutButton = document.getElementById('checkoutButton');
-
-// Add click event listener
 checkoutButton.addEventListener('click', function () {
-    // Redirect to the payment page (replace 'payment-page.html' with your actual payment page URL)
     window.location.href = 'Payment-Page.html';
 });
+
+// Functionality to remove items from the cart when "Remove" button is clicked
+// ... (logic inside the 'remove' button event listener)

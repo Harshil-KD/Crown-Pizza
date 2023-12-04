@@ -1,16 +1,21 @@
+// Wait for the DOM content to be fully loaded
 document.addEventListener("DOMContentLoaded", function () {
+    // Get references to various form input elements
     const inputName = document.getElementById('inputName');
     const inputEmail = document.getElementById('inputEmail');
     const inputNumber = document.getElementById('inputNumber');
     const expiryDate = document.getElementById('expiryDate');
     const cvcCode = document.getElementById('CVCcode');
     const orderButton = document.getElementById('orderButton');
+    // Create a Bootstrap modal instance for the order modal
     const myModal = new bootstrap.Modal(document.getElementById('orderModal'), {
         backdrop: 'static',
         keyboard: false
     });
 
+    // Event listener for inputEmail blur event to validate email
     inputEmail.addEventListener('blur', function () {
+        // Validate email format
         const email = inputEmail.value.trim();
         const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
         if (!isValidEmail) {
@@ -19,7 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
             clearError();
         }
     });
-
+    
+    // Event listener for inputNumber blur event to validate card number
     inputNumber.addEventListener('blur', function () {
         const cardNum = inputNumber.value.trim();
         if (cardNum.length !== 12 || isNaN(cardNum)) {
@@ -29,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    // Event listener for expiryDate blur event to validate expiry date
     expiryDate.addEventListener('blur', function () {
         const enteredDate = new Date(expiryDate.value);
         const today = new Date();
@@ -38,7 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
             clearError();
         }
     });
-
+    
+    // Event listener for cvcCode blur event to validate CVC code
     cvcCode.addEventListener('blur', function () {
         const cvc = cvcCode.value.trim();
         if (cvc.length !== 3 || isNaN(cvc)) {
@@ -47,22 +55,27 @@ document.addEventListener("DOMContentLoaded", function () {
             clearError();
         }
     });
+     
 
+    // Function to display error messages
     function showError(message) {
         const errorMessages = document.getElementById('errorMessages');
         errorMessages.innerHTML = `<p>${message}</p>`;
     }
-
+    
+    // Function to clear error messages
     function clearError() {
         const errorMessages = document.getElementById('errorMessages');
         errorMessages.innerHTML = '';
     }
 
+    // Event listener for orderButton click event
     orderButton.addEventListener('click', function (event) {
         event.preventDefault();
         const fields = [inputName, inputEmail, inputNumber, expiryDate, cvcCode];
         let allFieldsFilled = true;
 
+        // Validate if all fields are filled
         fields.forEach(field => {
             if (field.value.trim() === '') {
                 showError(`Please fill in ${field.previousElementSibling.textContent.trim().slice(0, -1)}.`);
@@ -79,6 +92,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// Function to redirect to the home page
 function redirectToHomePage() {
     // Redirect to the home page URL
     window.location.href = 'HomePage.html'; 
