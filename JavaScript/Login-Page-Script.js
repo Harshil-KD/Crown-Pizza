@@ -6,7 +6,7 @@ function validateLogin() {
     // Check if credentials are valid
     if (username === "user" && password === "P@ssw0rd123") {
         // Redirect to the pizza page (replace 'pizza.html' with the actual page)
-        window.location.href = 'Homepage.html';
+        window.location.href = 'HomePage.html';
     } else {
         alert('Invalid credentials. Please try again.');
     }
