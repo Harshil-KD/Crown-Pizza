@@ -1,0 +1,214 @@
+body {
+    background-color: #F2F2F2;
+    /* Change to your desired background color */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    /* This ensures the body is at least the full height of the viewport */
+}
+
+.navbar {
+    background-color: #00DC09;
+}
+
+.navbar-brand {
+    margin-right: 90px;
+    /* Adjust the value to increase/decrease the space */
+}
+
+.navbar-brand img {
+    max-width: 180px;
+    /* Adjust the value to change the width of the logo */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.navbar-nav {
+    padding-left: 50px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 22px;
+    margin-right: 20px;
+    font-weight: bold;
+    /* Adjust the font size */
+}
+
+/* Positioning the text elements */
+.position-relative {
+    position: relative;
+    z-index: 1;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 30px;
+    /* Place text above the background */
+}
+
+/* Adjust navbar for smaller screens */
+@media (max-width: 797px) {
+    .navbar-brand {
+        margin-right: 20px;
+        /* Adjust as needed */
+    }
+
+    .navbar-nav {
+        padding-left: 15px;
+        /* Adjust as needed */
+    }
+
+    .navbar-nav .nav-link {
+        margin-right: 15px;
+        /* Adjust as needed */
+        font-size: 14px;
+    }
+}
+
+/* Further adjustments for narrower screens */
+@media (max-width: 437px) {
+    .navbar-brand {
+        margin-right: 10px;
+        /* Adjust as needed */
+    }
+
+    .navbar-nav {
+        padding-left: 10px;
+        /* Adjust as needed */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 12px;
+        /* Adjust as needed */
+        margin-right: 10px;
+        /* Adjust as needed */
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 436px) {
+    .navbar-brand {
+        margin-right: 5px;
+        /* Adjust as needed */
+    }
+
+    .navbar-nav {
+        padding-left: 5px;
+        /* Adjust as needed */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 10px;
+        /* Adjust as needed */
+        margin-right: 10px;
+        /* Adjust as needed */
+    }
+}
+
+#totalAmount {
+    background-color: #00DC09;
+    padding: 20px;
+    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    position: sticky;
+}
+
+.row {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: wrap;
+}
+
+.themed-grid-col {
+    /* flex: 1 0 33.3333%;
+    Set the columns to take up an equal part of the row */
+
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    /* Adjust the padding as needed */
+
+    /* Ensure all cards take up equal height */
+}
+
+.card {
+    flex: 1;
+    margin: 10px;
+    /* height: 100%; */
+}
+
+.card-body {
+    flex-grow: 1;
+}
+
+.themed-grid-col {
+    padding: 45px;
+    /* Add padding to each column */
+}
+
+.priceLabel {
+    color: black;
+    background-color: #00DC09;
+    font-size: 44px;
+}
+
+.card-img-top {
+    margin-bottom: 20px;
+    padding-top: 50px;
+    width: 50%;
+    height: auto;
+    /* Adjust the width as needed */
+}
+
+h5 {
+    font-size: 44px;
+    /* Adjust the font size as needed */
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center horizontally */
+    text-align: center;
+    /* Center the text within the container */
+}
+
+.quantity-label {
+    margin-right: 10px;
+    /* Adjust the spacing between label and input */
+    /* Optionally, you can remove this margin and use padding to maintain space */
+}
+
+/* CSS for Total Amount */
+.totalAmount {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    border-top: 2px solid #ccc;
+    padding-top: 10px;
+    color: black;
+}
+
+.custom-checkout-btn {
+
+    background-color: #00DC09;
+    color: white;
+    padding: 12px 24px;
+    /* Adjust padding for size */
+    font-size: 48px;
+    font-weight: bold;
+    /* Adjust font size */
+    /* Additional styling if needed */
+
+}
+
+.mt-4 {
+    margin: 40px;
+}
+
+footer {
+    background-color: #00DC09;
+    /* Green background color */
+    color: white;
+    /* White text color */
+}

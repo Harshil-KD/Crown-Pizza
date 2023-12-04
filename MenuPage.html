@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags -->
+    <!-- Meta tags and links to external stylesheets and scripts -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crown Pizza</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/Menu-Page-Styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <!-- Navigation bar content -->
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-sm ">
+        <!-- Navbar content -->
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#">
+                <img src="Images/BrandIcon.png" alt="Brand_Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="HomePage.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Menu</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="DrinksPage.html">Drinks</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Dessert-Page.html">Desserts</a>
+                    </li>
+
+                </ul>
+
+                <a class="nav-link" href="Cart-Page.html">
+                    <img src="Images/Cart-Icon.png" alt="cart_logo">
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu items -->
+    <div class="row mb-3 text-center">
+
+        <!-- Menu item 1 -->
+
+        <!-- Pizza items displayed using cards in rows -->
+        <div class="row mb-3 text-center">
+            <!-- Each card represents a pizza item -->
+            <div class="col-sm-4 themed-grid-col">
+
+                <div class="card">
+                    <!-- Card content for a pizza item -->
+                    <div class="card-body position-relative">
+
+                        <div class="position-absolute top-0 start-0">
+                            <span class="badge pizzaPriceLabel" id="pizzaPriceLabel1">$20</span>
+                        </div>
+
+                        <img src="Images/pizza1.png" class="card-img-top mt-5" alt="card1" id="pizza1">
+                        <h5 class="pizzaName" id="pizzaName1">Newyork Pizza</h5>
+                        <p class="pizzaSize">
+                            <span class="size-label">Size:</span>
+                            <span class="size-value" id="pizzaType1">
+
+                                <select class="form-select" aria-label="Select" id="pizzaSize1"
+                                    onchange="updatePrice(1)">
+                                    <option value="small" selected>Small</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="large">Large</option>
+                                    <option value="extraLarge">Extra Large</option>
+                                </select>
+
+                            </span>
+                        </p>
+
+                        <div class="col-auto">
+
+                            <p class="pizzaQuantity">
+                                <span class="quantity-label">Quantity:</span>
+                                <span class="quantity-input">
+                                    <input type="number" class="form-control pizzaQuantity" id="pizzaQuantity1"
+                                        name="numericInput" value="1" min="1">
+                                </span>
+                            </p>
+
+                        </div>
+
+                        <button type="button" class="AddToCart btn mt-2" id="pizzaButton1"
+                            onclick="addToCart('Newyork Pizza', '20', 'pizzaSize1' ,'pizzaQuantity1', 'Images/pizza1.png')">
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Menu item 2 -->
+            <!-- card represents a pizza item -->
+            <div class="col-md-4 themed-grid-col">
+
+                <div class="card">
+                    <!-- Card content for a pizza item -->
+                    <div class="card-body position-relative">
+
+                        <div class="position-absolute top-0 start-0">
+                            <span class="badge pizzaPriceLabel" id="pizzaPriceLabel2">$20</span>
+                        </div>
+
+                        <img src="Images/pizza2.png" class="card-img-top mt-5" alt="card2" id="pizza2">
+                        <h5 class="pizzaName" id="pizzaName2">Pepperoni Pizza</h5>
+                        <p class="pizzaSize">
+                            <span class="size-label">Size:</span>
+                            <span class="size-value" id="pizzaType2">
+
+                                <select class="form-select" aria-label="Select" id="pizzaSize2"
+                                    onchange="updatePrice(2)">
+                                    <option value="small" selected>Small</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="large">Large</option>
+                                    <option value="extraLarge">Extra Large</option>
+                                </select>
+
+                            </span>
+                        </p>
+
+                        <div class="col-auto">
+
+                            <p class="pizzaQuantity">
+                                <span class="quantity-label">Quantity:</span>
+                                <span class="quantity-input">
+                                    <input type="number" class="form-control pizzaQuantity" id="pizzaQuantity2"
+                                        name="numericInput" value="1" min="1">
+                                </span>
+                            </p>
+
+                        </div>
+
+                        <button type="button" class="AddToCart btn mt-2" id="pizzaButton2"
+                            onclick="addToCart('Pepperoni Pizza', '20', 'pizzaSize2' , 'pizzaQuantity2', 'Images/pizza2.png')">
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- Menu item 3 -->
+            <!-- card represents a pizza item -->
+            <div class="col-md-4 themed-grid-col">
+
+                <div class="card">
+                    <!-- Card content for a pizza item -->
+                    <div class="card-body position-relative">
+
+                        <div class="position-absolute top-0 start-0">
+                            <span class="badge pizzaPriceLabel" id="pizzaPriceLabel3">$20</span>
+                        </div>
+
+                        <img src="Images/pizza3.png" class="card-img-top mt-5" alt="card3" id="pizza3">
+                        <h5 class="pizzaName" id="pizzaName3">Onion Pizza</h5>
+                        <p class="pizzaSize">
+                            <span class="size-label">Size:</span>
+                            <span class="size-value" id="pizzaType3">
+
+                                <select class="form-select" aria-label="Select" id="pizzaSize3"
+                                    onchange="updatePrice(3)">
+                                    <option value="small" selected>Small</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="large">Large</option>
+                                    <option value="extraLarge">Extra Large</option>
+                                </select>
+
+                            </span>
+                        </p>
+
+                        <div class="col-auto">
+
+                            <p class="pizzaQuantity">
+                                <span class="quantity-label">Quantity:</span>
+                                <span class="quantity-input">
+                                    <input type="number" class="form-control pizzaQuantity" id="pizzaQuantity3"
+                                        name="numericInput" value="1" min="1">
+                                </span>
+                            </p>
+
+                        </div>
+
+                        <button type="button" class="AddToCart btn mt-2" id="pizzaButton3"
+                            onclick="addToCart('Onion Pizza', '20', 'pizzaSize3', 'pizzaQuantity3', 'Images/pizza3.png')">
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Pizza items displayed using cards in rows -->
+        <div class="row mb-3 text-center">
+            <!-- card represents a pizza item -->
+            <div class="col-sm-4 themed-grid-col">
+
+                <div class="card">
+                    <!-- Card content for a pizza item -->
+                    <div class="card-body position-relative">
+
+                        <div class="position-absolute top-0 start-0">
+                            <span class="badge pizzaPriceLabel" id="pizzaPriceLabel4">$20</span>
+                        </div>
+
+                        <img src="Images/pizza4.png" class="card-img-top mt-5" alt="card4" id="pizza4">
+                        <h5 class="pizzaName" id="pizzaName4">Margherita Pizza</h5>
+                        <p class="pizzaSize">
+                            <span class="size-label">Size:</span>
+                            <span class="size-value" id="pizzaType4">
+
+                                <select class="form-select" aria-label="Select" id="pizzaSize4"
+                                    onchange="updatePrice(4)">
+                                    <option value="small" selected>Small</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="large">Large</option>
+                                    <option value="extraLarge">Extra Large</option>
+                                </select>
+
+                            </span>
+                        </p>
+
+                        <div class="col-auto">
+
+                            <p class="pizzaQuantity">
+                                <span class="quantity-label">Quantity:</span>
+                                <span class="quantity-input">
+                                    <input type="number" class="form-control pizzaQuantity" id="pizzaQuantity4"
+                                        name="numericInput" value="1" min="1">
+                                </span>
+                            </p>
+
+                        </div>
+
+                        <button type="button" class="AddToCart btn mt-2" id="pizzaButton4"
+                            onclick="addToCart('Margherita Pizza', '20', 'pizzaSize4', 'pizzaQuantity4', 'Images/pizza4.png')">
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- card represents a pizza item -->
+            <div class="col-md-4 themed-grid-col">
+
+                <div class="card">
+                    <!-- Card content for a pizza item -->
+                    <div class="card-body position-relative">
+
+                        <div class="position-absolute top-0 start-0">
+                            <span class="badge pizzaPriceLabel" id="pizzaPriceLabel5">$20</span>
+                        </div>
+
+                        <img src="Images/pizza5.png" class="card-img-top mt-5" alt="card5" id="pizza5">
+                        <h5 class="pizzaName" id="pizzaName5">Chicken Pizza</h5>
+                        <p class="pizzaSize">
+                            <span class="size-label">Size:</span>
+                            <span class="size-value" id="pizzaType5">
+
+                                <select class="form-select" aria-label="Select" id="pizzaSize5"
+                                    onchange="updatePrice(5)">
+                                    <option value="small" selected>Small</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="large">Large</option>
+                                    <option value="extraLarge">Extra Large</option>
+                                </select>
+
+                            </span>
+                        </p>
+
+                        <div class="col-auto">
+
+                            <p class="pizzaQuantity">
+                                <span class="quantity-label">Quantity:</span>
+                                <span class="quantity-input">
+                                    <input type="number" class="form-control pizzaQuantity" id="pizzaQuantity5"
+                                        name="numericInput" value="1" min="1">
+                                </span>
+                            </p>
+
+                        </div>
+
+                        <button type="button" class="AddToCart btn mt-2" id="pizzaButton5"
+                            onclick="addToCart('Chicken Pizza', '20', 'pizzaSize5', 'pizzaQuantity5', 'Images/pizza5.png')">
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- card represents a pizza item -->
+            <div class="col-md-4 themed-grid-col">
+
+                <div class="card">
+                    <!-- Card content for a pizza item -->
+                    <div class="card-body position-relative">
+
+                        <div class="position-absolute top-0 start-0">
+                            <span class="badge pizzaPriceLabel" id="pizzaPriceLabel6">$20</span>
+                        </div>
+
+                        <img src="Images/pizza6.png" class="card-img-top mt-5" alt="card6" id="pizza6">
+                        <h5 class="pizzaName" id="pizzaName6">Mushroom Pizza</h5>
+                        <p class="pizzaSize">
+                            <span class="size-label">Size:</span>
+                            <span class="size-value" id="pizzaType6">
+
+                                <select class="form-select" aria-label="Select" id="pizzaSize6"
+                                    onchange="updatePrice(6)">
+                                    <option value="small" selected>Small</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="large">Large</option>
+                                    <option value="extraLarge">Extra Large</option>
+                                </select>
+
+                            </span>
+                        </p>
+
+                        <div class="col-auto">
+
+                            <p class="pizzaQuantity">
+                                <span class="quantity-label">Quantity:</span>
+                                <span class="quantity-input">
+                                    <input type="number" class="form-control pizzaQuantity" id="pizzaQuantity6"
+                                        name="numericInput" value="1" min="1">
+                                </span>
+                            </p>
+
+                        </div>
+
+                        <button type="button" class="AddToCart btn mt-2" id="pizzaButton6"
+                            onclick="addToCart('Mushroom Pizza', '20','pizzaSize6', 'pizzaQuantity6', 'Images/pizza6.png')">
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- card represents a pizza item -->
+        <div class="row mb-3 text-center">
+
+            <div class="col-sm-4 themed-grid-col">
+
+                <div class="card">
+                    <!-- Card content for a pizza item -->
+                    <div class="card-body position-relative">
+
+                        <div class="position-absolute top-0 start-0">
+                            <span class="badge pizzaPriceLabel" id="pizzaPriceLabel7">$20</span>
+                        </div>
+
+                        <img src="Images/chickenburger.png" class="card-img-top mt-5" alt="card7" id="pizza7">
+                        <h5 class="pizzaName" id="pizzaName7">Chicken Burger</h5>
+                        <p class="pizzaSize">
+                            <span class="size-label">Size:</span>
+                            <span class="size-value" id="pizzaType7">
+
+                                <select class="form-select" aria-label="Select" id="pizzaSize7"
+                                    onchange="updatePrice(7)">
+                                    <option value="small" selected>Small</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="large">Large</option>
+                                    <option value="extraLarge">Extra Large</option>
+                                </select>
+
+                            </span>
+                        </p>
+
+                        <div class="col-auto">
+
+                            <p class="pizzaQuantity">
+                                <span class="quantity-label">Quantity:</span>
+                                <span class="quantity-input">
+                                    <input type="number" class="form-control pizzaQuantity" id="pizzaQuantity7"
+                                        name="numericInput" value="1" min="1">
+                                </span>
+                            </p>
+
+                        </div>
+
+                        <button type="button" class="AddToCart btn mt-2" id="pizzaButton7"
+                            onclick="addToCart('Chicken Burger', '20', 'pizzaSize7', 'pizzaQuantity7', 'Images/chickenburger.png')">
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- card represents a pizza item -->
+            <div class="col-md-4 themed-grid-col">
+
+                <div class="card">
+                    <!-- Card content for a pizza item -->
+                    <div class="card-body position-relative">
+
+                        <div class="position-absolute top-0 start-0">
+                            <span class="badge pizzaPriceLabel" id="pizzaPriceLabel8">$20</span>
+                        </div>
+
+                        <img src="Images/veggieburg.png" class="card-img-top mt-5" alt="card8" id="pizza8">
+                        <h5 class="pizzaName" id="pizzaName8">Veggie Burger</h5>
+                        <p class="pizzaSize">
+                            <span class="Size-label">Size:</span>
+                            <span class="size-value" id="pizzaType8">
+
+                                <select class="form-select" aria-label="Select" id="pizzaSize8"
+                                    onchange="updatePrice(8)">
+                                    <option value="small" selected>Small</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="large">Large</option>
+                                    <option value="extraLarge">Extra Large</option>
+                                </select>
+
+                            </span>
+                        </p>
+
+                        <div class="col-auto">
+
+                            <p class="pizzaQuantity">
+                                <span class="quantity-label">Quantity:</span>
+                                <span class="quantity-input">
+                                    <input type="number" class="form-control pizzaQuantity" id="pizzaQuantity8"
+                                        name="numericInput" value="1" min="1">
+                                </span>
+                            </p>
+
+                        </div>
+
+                        <button type="button" class="AddToCart btn mt-2" id="pizzaButton8"
+                            onclick="addToCart('Veggie Burger', '20', 'pizzaSize8', 'pizzaQuantity8', 'Images/veggieburg.png')">
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- card represents a pizza item -->
+            <div class="col-md-4 themed-grid-col">
+
+                <div class="card">
+                    <!-- Card content for a pizza item -->
+                    <div class="card-body position-relative">
+
+                        <div class="position-absolute top-0 start-0">
+                            <span class="badge pizzaPriceLabel" id="pizzaPriceLabel9">$20</span>
+                        </div>
+
+                        <img src="Images/fries.png" class="card-img-top mt-5" alt="card9" id="pizza9">
+                        <h5 class="pizzaName" id="pizzaName9">Potato Fries</h5>
+                        <p class="pizzaSize">
+                            <span class="size-label">Size:</span>
+                            <span class="size-value" id="pizzaType9">
+
+                                <select class="form-select" aria-label="Select" id="pizzaSize9">
+                                    <option value="small" selected>Small</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="large">Large</option>
+                                    <option value="extraLarge">Extra Large</option>
+                                </select>
+
+                            </span>
+                        </p>
+
+                        <div class="col-auto">
+
+                            <p class="pizzaQuantity">
+                                <span class="quantity-label">Quantity:</span>
+                                <span class="quantity-input">
+                                    <input type="number" class="form-control pizzaQuantity" id="pizzaQuantity9"
+                                        name="numericInput" value="1" min="1">
+                                </span>
+                            </p>
+
+                        </div>
+
+                        <button type="button" class="AddToCart btn mt-2" id="pizzaButton9"
+                            onclick="addToCart('Potato Fries', '20', 'pizzaSize9', 'pizzaQuantity9', 'Images/fries.png')">
+                            Add To Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Footer -->
+
+        <!-- Footer section -->
+        <footer class="text-center py-3">
+            <!-- Footer content -->
+            <div class="container">
+                <p>&copy; 2023 Crown Pizza. All rights reserved.</p>
+            </div>
+        </footer>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <!-- Custom JavaScript -->
+        <script src="JavaScript/Menu-Page-Script.js"></script>
+</body>
+
+</html>

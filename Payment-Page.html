@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Meta tags -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crown Pizza</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="CSS/Payment-Page-Styles.css">
+
+</head>
+
+<body>
+    <!-- Main Container -->
+    <div class="container-fluid">
+        <!-- Back Button -->
+        <a href="Cart-Page.html" class="btn btn-secondary mb-3">
+            
+            <i class="bi bi-arrow-left" id="BackButton"></i> Go Back
+        </a>
+
+        <!-- Heading -->
+        <h2>Pay Now</h2>
+
+        <!-- Payment Form -->
+        <form>
+                <!-- Form Fields -->
+            <div class="form-group row">
+                <!-- Name and Email Fields -->
+                <div class="col-sm-4">
+                    <label for="inputName" class="col-sm-2 col-form-label">Name</label><br>
+                    <input type="text" class="form-control" id="inputName" placeholder="Enter your name">
+                </div>
+                <div class="col-sm-4">
+                    <label for="inputEmail" class="col-sm-2 col-form-label">Email</label><br>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email">
+                </div>
+            </div>
+            
+            <!-- Card Number and Expiry Date Fields -->
+            <div class="form-group row">
+                <div class="col-sm-4">
+                    <label for="inputNumber" class="col-sm-2 col-form-label">Card Number</label><br>
+                    <input type="number" class="form-control" id="inputNumber" placeholder="Enter your card number">
+                </div>
+                <div class="col-sm-4">
+                    <label for="inputEmail" class="col-sm-2 col-form-label">Expiry Date</label><br>
+                    <input type="date" class="form-control" id="expiryDate" placeholder="Enter your card expiry">
+                </div>
+            </div>
+            
+            <!-- CVC Code Field -->
+            <div class="form-group row">
+                <div class="col-sm-4">
+                    <label for="CVCcode" class="col-sm-2 col-form-label">CVC Code</label><br>
+                    <input type="number" class="form-control" id="CVCcode" placeholder="Enter your CVC Code">
+                </div>
+            </div>
+
+            <!-- Error Messages Section -->
+            <div id="errorMessages" style="color: red; margin-top: 10px;"></div>
+
+            <!-- Order Button -->
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-primary" id="orderButton">Order Now</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Bootstrap Modal -->
+        <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="orderModalLabel">Payment Confirmation</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Payment Confirmation Content -->
+                        <img src="Images/paymentconfirm.png" alt="Image" class="img-fluid">
+
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="redirectToHomePage()">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-3">
+        <p>&copy; 2023 Crown Pizza. All rights reserved.</p>
+    </footer>
+
+<script src="JavaScript/Payment-Page-Scripts.js"></script>
+</body>
+</html>

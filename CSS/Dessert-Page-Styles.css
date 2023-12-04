@@ -1,0 +1,250 @@
+body {
+    background-color: #F2F2F2;
+    /* Change to your desired background color */
+}
+
+.navbar {
+    background-color: #00DC09;
+}
+
+.navbar-brand {
+    margin-right: 90px;
+    /* Adjust the value to increase/decrease the space */
+}
+
+.navbar-brand img {
+    max-width: 180px;
+    /* Adjust the value to change the width of the logo */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.navbar-nav {
+    padding-left: 50px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 22px;
+    margin-right: 20px;
+    font-weight: bold;
+    /* Adjust the font size */
+}
+
+/* Positioning the text elements */
+.position-relative {
+    position: relative;
+    z-index: 1;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 30px;
+    /* Place text above the background */
+}
+
+/* Adjust navbar for smaller screens */
+@media (max-width: 797px) {
+    .navbar-brand {
+        margin-right: 20px;
+        /* Adjust as needed */
+    }
+
+    .navbar-nav {
+        padding-left: 15px;
+        /* Adjust as needed */
+    }
+
+    .navbar-nav .nav-link {
+        margin-right: 15px;
+        /* Adjust as needed */
+        font-size: 14px;
+    }
+}
+
+/* Further adjustments for narrower screens */
+@media (max-width: 437px) {
+    .navbar-brand {
+        margin-right: 10px;
+        /* Adjust as needed */
+    }
+
+    .navbar-nav {
+        padding-left: 10px;
+        /* Adjust as needed */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 12px;
+        /* Adjust as needed */
+        margin-right: 10px;
+        /* Adjust as needed */
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 436px) {
+    .navbar-brand {
+        margin-right: 5px;
+        /* Adjust as needed */
+    }
+
+    .navbar-nav {
+        padding-left: 5px;
+        /* Adjust as needed */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 14px;
+        /* Adjust as needed */
+        margin-right: 10px;
+        /* Adjust as needed */
+    }
+}
+
+.themed-grid-col {
+    padding: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    /* Add padding to each column */
+}
+
+.card {
+    flex: 1;
+    margin: 10px;
+    /* Adjust margin as needed */
+}
+
+.pizzaPriceLabel {
+    color: black;
+    background-color: #00DC09;
+    font-size: 44px;
+}
+
+.card-img-top {
+    margin-bottom: 20px;
+    padding-top: 50px;
+    width: 50%;
+    height: auto;
+    /* Adjust the width as needed */
+}
+
+/* Increase size of price, name, and type labels */
+.dessertName {
+    font-size: 44px;
+    /* Adjust the font size as needed */
+}
+
+/* CSS for aligning pizza type elements */
+
+/* CSS for aligning quantity label and input horizontally */
+.dessertQuantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center horizontally */
+    text-align: center;
+    /* Center the text within the container */
+}
+
+.quantity-label {
+    margin-right: 10px;
+    /* Adjust the spacing between label and input */
+    /* Optionally, you can remove this margin and use padding to maintain space */
+}
+
+.AddToCart {
+    background-color: #00DC09;
+    font-size: 34px;
+    border-radius: 10%;
+}
+
+footer {
+    background-color: #00DC09;
+    /* Green background color */
+    color: white;
+    /* White text color */
+}
+
+.dessertPriceLabel {
+    color: black;
+    background-color: #00DC09;
+    font-size: 44px;
+}
+
+.card-img-top {
+    margin-bottom: 20px;
+    padding-top: 50px;
+    width: 50%;
+    height: auto;
+    /* Adjust the width as needed */
+}
+
+.dessertName {
+    font-size: 34px;
+    /* Adjust the font size as needed */
+}
+
+/* CSS for aligning pizza type elements */
+.dessertType {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center horizontally */
+    text-align: center;
+    /* Center the text within the container */
+}
+
+.type-label {
+    margin-right: 10px;
+    /* Adjust the spacing between label and value */
+}
+
+.type-value {
+    font-weight: bold;
+    /* Optional: to highlight the value */
+}
+
+.dessertQuantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center horizontally */
+    text-align: center;
+    /* Center the text within the container */
+}
+
+.quantity-label {
+    margin-right: 10px;
+    /* Adjust the spacing between label and input */
+    /* Optionally, you can remove this margin and use padding to maintain space */
+}
+
+.AddToCart {
+    background-color: #00DC09;
+    font-size: 34px;
+    border-radius: 10%;
+}
+
+footer {
+    background-color: #00DC09;
+    /* Green background color */
+    color: white;
+    /* White text color */
+}
+
+
+@media screen and (max-width: 1307px) {
+
+    .dessertName,
+    .AddToCart {
+        /* Decrease the font sizes for smaller screens */
+        font-size: 34px;
+    }
+}
+
+@media screen and (max-width: 1162px) {
+
+    .dessertName,
+    .AddToCart {
+        /* Decrease the font sizes for smaller screens */
+        font-size: 14px;
+    }
+}

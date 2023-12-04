@@ -1,0 +1,143 @@
+/* Styles for the container */
+.container {
+    margin: 0px;
+    padding: 50px;
+}
+
+/* Styles for secondary buttons */
+.btn-secondary {
+    background-color: white;
+    color: #00DC09;
+    font-size: 44px;
+    border: none;
+    margin: 10px;
+    padding: 10px 25px;
+}
+
+/* Styles for primary buttons */
+.btn-primary {
+
+    background-color: #00DC09;
+    color: white;
+    font-size: 40px;
+    border: none;
+    margin: 10px;
+    padding: 10px 25px;
+
+}
+
+/* Styles for h2 elements */
+h2 {
+    box-sizing: border-box;
+    margin: 20px 0px;
+    font-size: 44px;
+    background-color: #00DC09;
+    padding: 10px;
+    color: white
+}
+
+/* Styles for form label columns */
+.col-form-label {
+    width: 50%;
+}
+
+/* Styles for small screen grid columns */
+.col-sm-4 {
+    width: 50%;
+}
+
+/* Styles for rows */
+.row {
+    margin: 25px;
+}
+
+/* Styles for padding y-axis */
+.py-3 {
+    margin: 20px 0px;
+}
+
+/* Styles for footer */
+footer {
+    background-color: #00DC09;
+    /* Green background color */
+    color: white;
+    /* White text color */
+}
+
+/* CSS for small screens */
+@media (max-width: 576px) {
+
+    /* Adjusting the layout for small screens */
+    .col-sm-4 {
+        flex: 0 0 100%;
+        /* Set width to 100% for small screens */
+        max-width: 100%;
+        margin-bottom: 10px;
+        /* Optional: Add some space between stacked elements */
+    }
+}
+
+/* CSS/Payment-Page-Styles.css */
+
+/* Dim the background when modal is active */
+.modal-backdrop {
+    opacity: 0.5;
+    /* Adjust the opacity as needed */
+    background-color: #000;
+    /* Background color for the dimmed effect */
+}
+
+/* Style for the modal */
+.modal-content {
+    background-color: #fff;
+    /* Modal background color */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Add a subtle shadow */
+}
+
+.modal-header {
+    background-color: #00DC09;
+    /* Header background color */
+    border-bottom: none;
+    /* Remove border for the header */
+}
+
+.modal-title {
+    color: #fff;
+    /* Header title color */
+    font-weight: bold;
+    /* Make the title bold */
+}
+
+.modal-body {
+    /* Padding for the modal content */
+    background-color: #ffffff;
+}
+
+/* Optional: Style the close button */
+.btn-close {
+    color: #00DC09;
+    /* Close button color */
+}
+
+/* CSS/Payment-Page-Styles.css */
+
+
+/* Style for secondary (close) button */
+.btn-secondary {
+    background-color: #00DC09;
+    /* Change background color for secondary button */
+    border-color: #ffffff;
+    /* Change border color for secondary button */
+    color: #fff;
+    /* Text color for secondary button */
+    width: 100%;
+    /* Set the width to 100% */
+}
+
+/* Hover effect for buttons */
+.btn-secondary:hover {
+    opacity: 0.8;
+    /* Adjust opacity on hover */
+}
