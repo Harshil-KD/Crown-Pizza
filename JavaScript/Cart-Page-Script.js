@@ -1,20 +1,34 @@
+<<<<<<< HEAD
+=======
+// Function to retrieve cart items from session storage or return an empty array if none exist
+>>>>>>> 5b08c7c6507c23af9e1e9e1909533320b9c32b05
 function getCartItems() {
     return JSON.parse(sessionStorage.getItem('cart')) || [];
 }
 
+<<<<<<< HEAD
+=======
+
+// Function to display cart items on the page
+>>>>>>> 5b08c7c6507c23af9e1e9e1909533320b9c32b05
 function displayCartItems() {
+    // Fetch cart items from session storage
     const cartItems = getCartItems();
+
+    // Get DOM elements
     const cartItemsElement = document.getElementById('cartItems');
     const totalAmountElement = document.getElementById('totalAmount');
 
-    let totalAmount = 0;
+    let totalAmount = 0; // Variable to calculate total amount of items in the cart
 
     let currentIndex = 0;
-
+    // Loop through each item in the cart and create HTML elements to display them
     cartItems.forEach(item => {
+        // Create HTML elements
         const listItem = document.createElement('div');
         listItem.classList.add('col-sm-4', 'themed-grid-col');
 
+        // ... (creating card, card body, image, buttons, etc.)
         const card = document.createElement('div');
         card.classList.add('card');
 
@@ -70,22 +84,42 @@ function displayCartItems() {
         itemQuantity.textContent = `Quantity: ${item.quantity}`;
         cardBody.appendChild(itemQuantity);
 
+        // Adding created elements to the DOM
         card.appendChild(cardBody);
         listItem.appendChild(card);
         cartItemsElement.appendChild(listItem);
 
+<<<<<<< HEAD
+=======
+        // Update total amount by calculating price * quantity for each item
+>>>>>>> 5b08c7c6507c23af9e1e9e1909533320b9c32b05
         totalAmount += item.price * item.quantity;
 
         currentIndex++;
     });
 
+<<<<<<< HEAD
     totalAmountElement.textContent = `Total: $${totalAmount.toFixed(2)}`;
 }
 
+=======
+    // Display total amount in the designated element
+    totalAmountElement.textContent = `Total: $${totalAmount.toFixed(2)}`;
+}
+
+// Call function to display cart items when the page loads
+>>>>>>> 5b08c7c6507c23af9e1e9e1909533320b9c32b05
 displayCartItems();
 
+// Get checkout button and add an event listener to redirect to payment page on click
 const checkoutButton = document.getElementById('checkoutButton');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5b08c7c6507c23af9e1e9e1909533320b9c32b05
 checkoutButton.addEventListener('click', function () {
     window.location.href = 'Payment-Page.html';
 });
+
+// Functionality to remove items from the cart when "Remove" button is clicked
+// ... (logic inside the 'remove' button event listener)

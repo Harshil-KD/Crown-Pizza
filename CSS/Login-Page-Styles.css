@@ -1,7 +1,9 @@
+/* Set the background color for the body */
 body {
     background-color: #f8f9fa;
 }
 
+/* Styles for the header */
 .header {
     background-color: #00DC09;
     color: #ffffff;
@@ -9,10 +11,12 @@ body {
     text-align: center;
 }
 
+/* Styles for the container */
 .container {
     margin-top: 20px;
 }
 
+/* Styles for the login container */
 .login-container {
     display: flex;
     align-items: center;
@@ -20,15 +24,18 @@ body {
     padding-top: 80px;
 }
 
+/* Styles for the login image */
 .login-image {
     width: 45%;
     text-align: center;
 }
 
+/* Styles for the login form */
 .login-form {
     width: 50%;
 }
 
+/* Styles for the login button */
 .btn-login {
     background-color: #00DC09;
     padding: 10px 40px;

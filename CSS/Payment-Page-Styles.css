@@ -1,8 +1,10 @@
+/* Styles for the container */
 .container {
     margin: 0px;
     padding: 50px;
 }
 
+/* Styles for secondary buttons */
 .btn-secondary {
     background-color: white;
     color: #00DC09;
@@ -12,6 +14,7 @@
     padding: 10px 25px;
 }
 
+/* Styles for primary buttons */
 .btn-primary {
 
     background-color: #00DC09;
@@ -23,6 +26,7 @@
 
 }
 
+/* Styles for h2 elements */
 h2 {
     box-sizing: border-box;
     margin: 20px 0px;
@@ -32,22 +36,27 @@ h2 {
     color: white
 }
 
+/* Styles for form label columns */
 .col-form-label {
     width: 50%;
 }
 
+/* Styles for small screen grid columns */
 .col-sm-4 {
     width: 50%;
 }
 
+/* Styles for rows */
 .row {
     margin: 25px;
 }
 
+/* Styles for padding y-axis */
 .py-3 {
     margin: 20px 0px;
 }
 
+/* Styles for footer */
 footer {
     background-color: #00DC09;
     /* Green background color */
